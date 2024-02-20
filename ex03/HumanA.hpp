@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 21:54:50 by hrinka            #+#    #+#             */
-/*   Updated: 2024/02/19 17:11:52 by hrinka           ###   ########.fr       */
+/*   Created: 2024/02/19 19:20:13 by hrinka            #+#    #+#             */
+/*   Updated: 2024/02/19 19:41:10 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie	*newZombie(std::string name);
-
-void	randomChump(std::string name);
-
-int		main (void)
+class	HumanA
 {
-	Zombie *z = newZombie("Bob");
-	z->announce();
-	randomChump("Aitch");
-	delete z;
-}
+	private:
+		std::string	_name;
+		Weapon		&_weapon;
+	public:
+		HumanA(std::string name, Weapon &weapon);
+		~HumanA(void);
+		void	attack(void);
+		void	setWeapon(Weapon weapon);
+};

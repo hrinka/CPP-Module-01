@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 21:54:50 by hrinka            #+#    #+#             */
-/*   Updated: 2024/02/19 17:11:52 by hrinka           ###   ########.fr       */
+/*   Created: 2024/02/19 19:18:06 by hrinka            #+#    #+#             */
+/*   Updated: 2024/02/19 19:20:10 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie	*newZombie(std::string name);
-
-void	randomChump(std::string name);
-
-int		main (void)
+Weapon::Weapon(std::string type): _type(type)
 {
-	Zombie *z = newZombie("Bob");
-	z->announce();
-	randomChump("Aitch");
-	delete z;
+}
+
+Weapon::~Weapon(void)
+{
+}
+
+const std::string&	Weapon::getType(void)
+{
+	return (this->_type);
+}
+
+void	Weapon::setType(std::string type)
+{
+	this->_type = type;
 }

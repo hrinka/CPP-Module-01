@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 21:54:50 by hrinka            #+#    #+#             */
-/*   Updated: 2024/02/19 17:11:52 by hrinka           ###   ########.fr       */
+/*   Created: 2024/02/19 17:27:29 by hrinka            #+#    #+#             */
+/*   Updated: 2024/02/19 17:32:11 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+
+# define ZOMBIE_HPP
+
+# include <iostream>
+# include <algorithm>
+
+class Zombie
+{
+	private:
+		std::string	_name;
+	public:
+	Zombie(std::string name);
+	Zombie(void);
+	~Zombie(void);
+	void	announce(void);
+	void	setName(std::string name);
+};
 
 Zombie	*newZombie(std::string name);
 
 void	randomChump(std::string name);
 
-int		main (void)
-{
-	Zombie *z = newZombie("Bob");
-	z->announce();
-	randomChump("Aitch");
-	delete z;
-}
+#endif
