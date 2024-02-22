@@ -6,7 +6,7 @@
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:15:39 by hrinka            #+#    #+#             */
-/*   Updated: 2024/02/19 17:38:46 by hrinka           ###   ########.fr       */
+/*   Updated: 2024/02/22 19:07:26 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Zombie::Zombie(std::string name)
 Zombie::Zombie(void)
 {
 	this->_name = "(null)";
-	std::cout << "Zombie object " << this->_name << " destroyed" << std::endl;
+	std::cout << "Zombie object " << this->_name << " created" << std::endl;
 }
 
 Zombie::~Zombie()
